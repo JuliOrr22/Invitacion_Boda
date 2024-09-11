@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Kenya & Julio</title>
+    <!-- Vinculamos el archivo CSS externo -->
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Sobre de la invitación -->
+    <div class="envelope" id="envelope">
+        <div class="letter"></div>
+    </div>
+
+    <!-- Contenido principal de la invitación -->
+    <div id="content">
+        <!-- Fondo animado de hojas de otoño -->
+        <div class="falling-leaves"></div>
+
+        <!-- Sección: Nombres y cuenta regresiva -->
+        <div class="section">
+            <div class="nombres">
+                <h2>Nuestra Boda</h2>
+                <h1>Kenya & Julio</h1>
+            </div>
+            <div class="new-container">
+                <h1>Te esperamos el 26 de Octubre, faltan:</h1>
+                <div class="countdown" id="countdown">
+                    <!-- Aquí aparecerá el conteo regresivo -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección: Familias y Padrinos -->
+        <div class="section">
+            <h2>Nuestras Familias</h2>
+            <div class="familia-container">
+                <!-- Familia Orrala Moreira -->
+                <div class="familia">
+                    <img src="URL_DE_LA_FOTO_ORRALA" alt="Familia Orrala Moreira" class="familia-foto">
+                    <p>Familia Orrala Moreira</p>
+                </div>
+                <!-- Familia Mejillón González -->
+                <div class="familia">
+                    <img src="URL_DE_LA_FOTO_MEJILLON" alt="Familia Mejillón González" class="familia-foto">
+                    <p>Familia Mejillón González</p>
+                </div>
+            </div>
+
+            <!-- Padrinos -->
+            <h2>Padrinos</h2>
+            <div class="padrinos-container">
+                <div class="padrino-pareja">
+                    <div class="padrino">
+                        <img src="URL_DE_LA_FOTO_PADRINO_NOVIO" alt="Padrino del Novio" class="familia-foto">
+                        <p>Padrino del Novio</p>
+                    </div>
+                    <div class="padrino">
+                        <img src="URL_DE_LA_FOTO_MADRINA_NOVIO" alt="Madrina del Novio" class="familia-foto">
+                        <p>Madrina del Novio</p>
+                    </div>
+                </div>
+                <div class="padrino-pareja">
+                    <div class="padrino">
+                        <img src="URL_DE_LA_FOTO_PADRINO_NOVIA" alt="Padrino de la Novia" class="familia-foto">
+                        <p>Padrino de la Novia</p>
+                    </div>
+                    <div class="padrino">
+                        <img src="URL_DE_LA_FOTO_MADRINA_NOVIA" alt="Madrina de la Novia" class="familia-foto">
+                        <p>Madrina de la Novia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frase de invitación -->
+        <div class="section">
+            <h2>Frase de Invitación</h2>
+            <div class="icono-invitacion">
+                <img src="https://www.pngmart.com/files/22/Wedding-PNG-Isolated-HD-Pictures.png" alt="Icono de Invitación" class="invitacion-icono">
+            </div>
+            <p>Nos complace profundamente invitarte a compartir con nosotros un día lleno de amor...</p>
+        </div>
+
+        <!-- Lugar y Ubicación -->
+        <div class="section">
+            <h2>Lugar y Ubicación</h2>
+            <!-- Ceremonia religiosa -->
+            <div class="lugar">
+                <h3>Ceremonia Religiosa</h3>
+                <a class="rsvp-button" href="https://maps.app.goo.gl/duCCUCZ2o1SeAtfk9" target="_blank">Ver Misa en Google Maps</a>
+            </div>
+            <!-- Recepción -->
+            <div class="lugar">
+                <h3>Recepción</h3>
+                <a class="rsvp-button" href="https://maps.app.goo.gl/28DWB6iQx943VYFM9" target="_blank">Ver Recepción en Google Maps</a>
+            </div>
+        </div>
+
+        <!-- Confirmar asistencia -->
+        <div class="section">
+            <h2>Confirmar Asistencia</h2>
+            <form action="https://docs.google.com/forms/d/e/XXXXXXX/formResponse" method="POST" target="_blank">
+                <input type="text" name="entry.XXXXXX" placeholder="Nombre completo" required>
+                <input type="email" name="entry.YYYYYY" placeholder="Correo electrónico" required>
+                <button type="submit" class="form-button">Enviar Confirmación</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Música de fondo -->
+    <audio autoplay loop>
+        <source src="https://www.example.com/musica-de-boda.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <!-- Vinculamos el archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

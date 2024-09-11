@@ -1,0 +1,70 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #D4AF37;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #F7E7CE;
+}
+
+/* Ocultar contenido principal hasta que la animación termine */
+#content {
+    display: none;
+}
+
+/* Estilos del sobre */
+.envelope {
+    width: 300px;
+    height: 200px;
+    background-color: #FFFFFF;
+    border: 2px solid #D4AF37;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos del sobre cuando está abierto */
+.envelope.open .letter {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+/* Estilos de la cuenta regresiva */
+.countdown {
+    font-size: 2em;
+    background-color: #2C3E50;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilos del botón RSVP */
+.rsvp-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #D4AF37;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rsvp-button:hover {
+    background-color: #997a00;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .countdown {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown {
+        font-size: 1.2em;
+    }
+}
