@@ -32,50 +32,8 @@
             height: 100%;
             text-align: center;
         }
-        .envelope {
-            width: 300px;
-            height: 200px;
-            position: absolute;
-            background-color: #FFFFFF; /* Blanco */
-            border: 2px solid #D4AF37; /* Borde dorado */
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .envelope::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background-color: #2C3E50; /* Azul marino */
-            transform-origin: bottom;
-            transform: rotateX(0deg);
-            transition: transform 1s ease-in-out;
-            border-bottom: 2px solid #D4AF37; /* Borde dorado */
-        }
-        .letter {
-            width: 90%;
-            height: 70%;
-            background-color: #FFFFFF; /* Blanco */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 100%);
-            border: 1px solid #BDC3C7; /* Borde gris paloma */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 1s ease-in-out 1s, opacity 1s ease-in-out 1s;
-            opacity: 0;
-        }
-
-        .envelope.open .letter {
-            transform: translate(-50%, -50%);
-            opacity: 1;
-        }
-
-        .envelope.open::before {
-            transform: rotateX(-180deg);
-        }
+       
+    
 
         .fade-out {
             opacity: 0;
@@ -481,9 +439,6 @@
 </head>
 
 <body>
-    <div class="envelope" id="envelope">
-        <div class="letter"></div>
-    </div class="wrapper">
     <div>
         <div id="content">
             <!-- Sección 1: Presentación -->
@@ -616,22 +571,7 @@
     </audio>
 
     <script>
-         // Esperar a que la página cargue completamente
-         window.onload = function() {
-            // Añadir la clase 'open' a la carta para iniciar la animación
-            document.getElementById('envelope').classList.add('open');
 
-            // Esperar a que la animación termine (2 segundos) y luego desvanecer la carta
-            setTimeout(function() {
-                document.getElementById('envelope').classList.add('fade-out');
-
-                // Después de que la carta se desvanezca, eliminarla y mostrar el contenido principal
-                setTimeout(function() {
-                    document.getElementById('envelope').remove();
-                    document.getElementById('content').style.display = 'block';
-                }, 1000); // Espera 1 segundo para que la carta desaparezca completamente
-            }, 2000); // Espera 2 segundos para que la animación de apertura termine
-        };
         // Fecha de la boda
         var weddingDate = new Date("Oct 26, 2024 17:00:00").getTime();
 
