@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda - Kenya & Julio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;700&family=Italianno:wght@400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Italianno', cursive;
             color: #D4AF37;
             text-align: center;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Evita el desbordamiento horizontal */
-            position: relative;
+            overflow-x: hidden;
             background-color: #F7E7CE;
+        }
+        h1, h2 {
+            font-family: 'Great Vibes', cursive;
+            margin-top: 0;
+        }
+        h3, p {
+            font-size: 2em;
         }
 
         #content {
@@ -25,7 +33,7 @@
         .envelope {
             width: 300px;
             height: 200px;
-            position: relative;
+            position: absolute;
             background-color: #FFFFFF; /* Blanco */
             border: 2px solid #D4AF37; /* Borde dorado */
             border-radius: 10px;
@@ -91,22 +99,13 @@
             margin-bottom: 30px;
         }
 
-        .familia, .padrino {
-            width: 180px;
-            text-align: center;
-        }
+  
 
         .familia img, .padrino img {
             width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .familia p, .padrino p {
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: #333;
         }
 
         .padrino-pareja {
@@ -132,12 +131,10 @@
         }
 
         .invitacion-icono {
-            width: 50px;
-            height: 50px;
+            height: 2em;
         }
 
         p {
-            font-size: 1.2em;
             line-height: 1.5;
             color: #333;
             font-style: italic;
@@ -191,7 +188,7 @@
             background-size: contain;        /* Ajusta el tamaño de la imagen para cubrir el div */
             background-position: center;     /* Centra la imagen en el div */
             background-repeat: no-repeat;    /* Evita que la imagen se repita */
-            padding: 12em 9em;               /* Espacio alrededor del contenido para pantallas grandes */
+            padding: 8em 2em 6em 2em;             /* Espacio alrededor del contenido para pantallas grandes */
             text-align: center;              /* Centra el texto */
             border-radius: 10px;             /* Añade bordes redondeados */
         }
@@ -216,16 +213,12 @@
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 4em;
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 3em;
             margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2em;
         }
 
         .countdown {
@@ -370,153 +363,255 @@
                 opacity: 0;
             }
         }
+        img {
+        max-width: 100%;
+        height: auto;
+        }
+        @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        .formulario {
+            width: 100%;
+            margin: 0;
+        }
+
+        img, iframe {
+            width: 100%;
+        }
+        }
+        iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 600px; /* Puedes ajustar el tamaño según tu preferencia */
+        border: none;
+        overflow: hidden; /* Esto debería evitar las barras de scroll */
+        }
+        @media screen and (max-width: 768px) {
+        iframe {
+            height: 400px; /* Ajuste para pantallas más pequeñas */
+        }
+        }
+
+        /* Estilos generales para las secciones */
+        .section {
+            padding: 60px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+            border-bottom: 5px solid #D4AF37; /* Línea dorada elegante */
+            padding-bottom: 30px; /* Espacio extra al final para el borde */
+            position: relative;
+        }
+
+        .section::after {
+            content: '';
+            position: absolute;
+            bottom: -20px; /* Espacio debajo de la sección */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px; /* Ajusta el ancho del ornamento */
+            height: 5px;
+            background: url('tu-imagen-ornamento.png') no-repeat center center;
+            background-size: contain; /* Asegúrate de que el ornamento se ajuste */
+        }
+
+        /* Responsivo para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .section {
+                padding: 40px 20px;
+                border-bottom: 4px solid #D4AF37; /* Reducción del borde para pantallas pequeñas */
+            }
+
+            .section::after {
+                width: 80px; /* Ajusta el ancho del ornamento para pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 30px 15px;
+                border-bottom: 3px solid #D4AF37;
+            }
+
+            .section::after {
+                width: 60px; /* Ajusta el ornamento para móviles */
+            }
+        }
+
+/**/
+        .wrapper {
+        background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+        color: #eee;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+        animation: animation 100s linear infinite;
+        }
+
+        @keyframes animation {
+        100%{
+            background-position:0px -3000px;
+        }
+        }
+        .icono-copa, .icono-anillos{
+            position: inherit;
+            font-size: 2em;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
+
 <body>
     <div class="envelope" id="envelope">
         <div class="letter"></div>
-    </div>
-    <div id="content">
-<!-- Fondo animado de hojas de otoño -->
-<div class="falling-leaves"></div>
-
-<!-- Sección 1: Presentación -->
-<div class="section">
-    <div class="nombres">
-        <h2>Nuestra Boda</h2>
-        <h1>Kenya & Julio</h1>
-    </div>
-    <div class="new-container">
-        <h1>Tes esperamos el 26 de Octubre, Faltan:</h1>
-        <div class="countdown" id="countdown">
-            <!-- Aquí aparecerá el conteo regresivo -->
-        </div>
-    </div>
-    
-</div>
-
-<!-- Sección 2: Nuestras Familias -->
-<!-- Sección 2: Nuestras Familias -->
-<div class="section">
-    <h2>Nuestras Familias</h2>
-    
-    <!-- Contenedor para las familias -->
-    <div class="familia-container">
-        <!-- Familia Orrala Moreira -->
-        <div class="familia">
-            <img src="URL_DE_LA_FOTO_ORRALA" alt="Familia Orrala Moreira" class="familia-foto">
-            <p>Familia Orrala Moreira</p>
-        </div>
-
-        <!-- Familia Mejillón González -->
-        <div class="familia">
-            <img src="URL_DE_LA_FOTO_MEJILLON" alt="Familia Mejillón González" class="familia-foto">
-            <p>Familia Mejillón González</p>
-        </div>
-    </div>
-
-    <h2>Padrinos</h2>
-    
-    <!-- Contenedor para los padrinos -->
-    <div class="padrinos-container">
-        <!-- Padrinos del Novio -->
-        <div class="padrino-pareja">
-            <div class="padrino">
-                <img src="URL_DE_LA_FOTO_PADRINO_NOVIO" alt="Padrino del Novio" class="familia-foto">
-                <p>Padrino del Novio</p>
+    </div class="wrapper">
+    <div>
+        <div id="content">
+            <!-- Sección 1: Presentación -->
+            <div class="section">
+                <div class="nombres">
+                    <h2>Nuestra Boda</h2>
+                    <h1>Kenya & Julio</h1>
+                </div>
+                <div class="new-container">
+                    <h1>Tes esperamos el 26 de Octubre Faltan:</h1>
+                    <div class="countdown" id="countdown">
+                        <!-- Aquí aparecerá el conteo regresivo -->
+                    </div>
+                    <h3>La boda inicia a las 17:00h</h3>
+                </div>
+                
             </div>
-            <div class="padrino">
-                <img src="URL_DE_LA_FOTO_MADRINA_NOVIO" alt="Madrina del Novio" class="familia-foto">
-                <p>Madrina del Novio</p>
+
+            <!-- Sección 2: Nuestras Familias -->
+            <!-- Sección 2: Nuestras Familias -->
+            <div class="section">
+                <h2>Nuestros Padres</h2>
+                
+                <!-- Contenedor para las familias -->
+                <div class="familia-container">
+                    <!-- Familia Orrala Moreira -->
+                    <div class="familia new-container">
+                        <p>Cesar Orrala Moreno</p>
+                        <h3>&</h3>
+                        <p>Luz Moreira Dominguez</p>
+                    </div>
+
+                    <!-- Familia Mejillón González -->
+                    <div class="familia new-container">
+                        <p>Jose Mejillon Balon</p>
+                        <h3>&</h3>
+                        <p>Marianita Gonzalez Lucas</p>
+                    </div>
+                </div>
+
+                <h2>Padrinos</h2>
+                
+                <!-- Contenedor para los padrinos -->
+                <div class="padrinos-container">
+                    <!-- Padrinos del Novio -->
+                    <div class="padrino-pareja">
+                        <div class="padrino new-container">
+                            <h3>Padrino del Novio</h3>
+                            <p>Martin Moreira</p>
+                        </div>
+                        <div class="padrino new-container">
+                            <h3>Madrina del Novio</h3>
+                            <p>Nuri Quimi</p>
+                        </div>
+                    </div>
+
+                    <!-- Padrinos de la Novia -->
+                    <div class="padrino-pareja">
+                        <div class="padrino new-container">
+                            <h3>Padrino de la Novia</h3>
+                            <p>Jhonny Mejillon Balon</p>
+                        </div>
+                        <div class="padrino new-container">
+                            <h3>Madrina de la Novia</h3>
+                            <p>Pamela Suarez Gonzalez</p>
+                        </div>
+                    </div>
+                </div>
+                <i class="fas fa-glass-cheers icono-copa"></i> <!-- Ícono de copa -->
+            </div>
+
+
+            <!-- Sección 3: Frase de Invitación -->
+            <div class="section">
+                <h2>Estas Invitado 😊</h2>
+                
+                <!-- Frase formal de invitación -->
+                <p>Nos complace profundamente invitarte a compartir con nosotros un día lleno de amor y alegría, 
+                donde celebraremos el comienzo de nuestra vida juntos. Nos encantaría contar con tu presencia en este momento tan especial, 
+                donde uniremos nuestras vidas en matrimonio rodeados de familiares y amigos cercanos.</p>
+
+                <div class="icono-invitacion">
+                    <img src="https://www.pngmart.com/files/22/Wedding-PNG-Isolated-HD-Pictures.png" alt="Icono de Invitación" class="invitacion-icono">
+                </div>
+            </div>
+
+            <!-- Sección 4: Lugar y Ubicación -->
+            <div class="section">
+                <h2>Lugar y Ubicación</h2>
+
+                <!-- Sección de la Misa -->
+                <div class="lugar">
+                    <h3>Ceremonia Religiosa</h3>
+                    <div class="imagen-lugar">
+                        <img src="C:\Users\Juegos\Desktop\Invitacion_Boda\imagen\iglesia.png" alt="Iglesia San Jose de Salinas" class="imagen-evento">
+                    </div>
+                    <p>La ceremonia religiosa será en un hermoso templo que nos brinda la oportunidad de compartir un momento espiritual y sagrado con nuestros seres queridos.</p>
+                    <a class="rsvp-button" href="https://maps.app.goo.gl/duCCUCZ2o1SeAtfk9" target="_blank">Ver Iglesia en Google Maps</a>
+                </div>
+
+                <!-- Sección de la Recepción -->
+                <div class="lugar">
+                    <h3>Recepción</h3>
+                    <div class="imagen-lugar">
+                    <img src="C:\Users\Juegos\Desktop\Invitacion_Boda\imagen\recepcion.png" alt="Hotel Riviera del Mar">
+                    </div>
+                    <p>La recepción se llevará a cabo en un lugar encantador donde celebraremos nuestra unión con una gran fiesta, rodeados de amigos y familiares.</p>
+                    <a class="rsvp-button" href="https://maps.app.goo.gl/28DWB6iQx943VYFM9" target="_blank">Ver Recepción en Google Maps</a>
+                </div>
+                <i class="fas fa-ring icono-anillos"></i> <!-- Ícono de anillos -->
+            </div>
+
+
+            <!-- Sección 5: Recomendación de Adultos -->
+            <div class="section">
+                <h2>Nos encantaría contar con tu presencia</h2>
+                <p>Este es un día muy especial para nosotros y nos gustaría compartirlo contigo. Por favor, confirma tu asistencia para saber si contamos contigo en esta ocasión tan significativa.</p>
+                <p>Esperamos que puedas acompañarnos y disfrutar de este momento tan importante.</p>
+                <p>Tu presencia es muy valiosa para nosotros y queremos hacer de este día algo inolvidable junto a nuestros seres queridos.</p>
+            </div>
+
+            <!-- Sección 6: Confirmar Asistencia -->
+            <div class="section">
+                <h2>Confirmar Asistencia</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3xGUKuBKUFjugSG4Ua--zAMiW3K75Lu8ObKqdWrO9ous9gg/viewform?embedded=true" width="640" height="1347" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
         </div>
-
-        <!-- Padrinos de la Novia -->
-        <div class="padrino-pareja">
-            <div class="padrino">
-                <img src="URL_DE_LA_FOTO_PADRINO_NOVIA" alt="Padrino de la Novia" class="familia-foto">
-                <p>Padrino de la Novia</p>
-            </div>
-            <div class="padrino">
-                <img src="URL_DE_LA_FOTO_MADRINA_NOVIA" alt="Madrina de la Novia" class="familia-foto">
-                <p>Madrina de la Novia</p>
-            </div>
-        </div>
     </div>
-</div>
-
-
-<!-- Sección 3: Frase de Invitación -->
-<div class="section">
-    <h2>Frase de Invitación</h2>
-    
-    <!-- Icono de invitación -->
-    <div class="icono-invitacion">
-        <img src="https://www.pngmart.com/files/22/Wedding-PNG-Isolated-HD-Pictures.png" alt="Icono de Invitación" class="invitacion-icono">
-    </div>
-    
-    <!-- Frase formal de invitación -->
-    <p>Nos complace profundamente invitarte a compartir con nosotros un día lleno de amor y alegría, 
-    donde celebraremos el comienzo de nuestra vida juntos. Nos encantaría contar con tu presencia en este momento tan especial, 
-    donde uniremos nuestras vidas en matrimonio rodeados de familiares y amigos cercanos.</p>
-</div>
-
-<!-- Sección 4: Lugar y Ubicación -->
-<div class="section">
-    <h2>Lugar y Ubicación</h2>
-
-    <!-- Sección de la Misa -->
-    <div class="lugar">
-        <h3>Ceremonia Religiosa</h3>
-        <div class="imagen-lugar">
-            <img src="" alt="Imagen de la Iglesia" class="imagen-evento">
-        </div>
-        <p>La ceremonia religiosa será en un hermoso templo que nos brinda la oportunidad de compartir un momento espiritual y sagrado con nuestros seres queridos.</p>
-        <a class="rsvp-button" href="https://maps.app.goo.gl/duCCUCZ2o1SeAtfk9" target="_blank">Ver Misa en Google Maps</a>
-    </div>
-
-    <!-- Sección de la Recepción -->
-    <div class="lugar">
-        <h3>Recepción</h3>
-        <div class="imagen-lugar">
-           <img src="" alt="riviera">
-        </div>
-        <p>La recepción se llevará a cabo en un lugar encantador donde celebraremos nuestra unión con una gran fiesta, rodeados de amigos y familiares.</p>
-        <a class="rsvp-button" href="https://maps.app.goo.gl/28DWB6iQx943VYFM9" target="_blank">Ver Recepción en Google Maps</a>
-    </div>
-</div>
-
-
-<!-- Sección 5: Recomendación de Adultos -->
-<div class="section">
-    <h2>Recomendación</h2>
-    <p>Por favor, les pedimos que este día tan especial sea solo para adultos.</p>
-</div>
-
-<!-- Sección 6: Confirmar Asistencia -->
-<div class="section">
-    <h2>Confirmar Asistencia</h2>
-    <form action="https://docs.google.com/forms/d/e/XXXXXXX/formResponse" method="POST" target="_blank">
-        <input type="text" name="entry.XXXXXX" placeholder="Nombre completo" required>
-        <input type="email" name="entry.YYYYYY" placeholder="Correo electrónico" required>
-        <select name="entry.ZZZZZZ" required>
-            <option value="" disabled selected>Número de asistentes</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <textarea name="entry.AAAAAA" placeholder="¿Algún comentario adicional?"></textarea>
-        <button type="submit" class="form-button">Enviar Confirmación</button>
-    </form>
-</div>
-    </div>
-    
-
     <!-- Música de fondo -->
     <audio autoplay loop>
-        <source src="https://www.example.com/musica-de-boda.mp3" type="audio/mpeg">
-        Tu navegador no soporta la reproducción de audio.
+         <source src="file:///C:/Users/Juegos/Desktop/Invitacion_Boda/imagen/musicaFondo.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
     </audio>
 
     <script>
@@ -580,6 +675,20 @@
 
         // Generar hojas de manera continua
         setInterval(createLeaf, 500); // Crear una nueva hoja cada medio segundo
+        function mostrarInvitados() {
+        // Obtener el valor seleccionado en el dropdown
+        var numInvitados = document.getElementById("num-invitados").value;
+        
+        // Ocultar todos los campos de los invitados
+        for (var i = 1; i <= 4; i++) {
+            document.getElementById("invitado-" + i).style.display = "none";
+        }
+        
+        // Mostrar solo los campos necesarios según el número de invitados
+        for (var i = 1; i <= numInvitados; i++) {
+            document.getElementById("invitado-" + i).style.display = "block";
+        }
+    }
     </script>
 
 </body>
